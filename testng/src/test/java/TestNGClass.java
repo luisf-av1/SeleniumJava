@@ -21,29 +21,29 @@ public class TestNGClass {
         driver.quit();
     }
 
-    @Test
+    @Test 
     public void openWebsite() throws InterruptedException{
         System.out.println("Opening web...");
         driver.get("https://www.google.com");
         Thread.sleep(3000);
     }
 
-    @Test
+    @Test (priority = 1)
     public void signUp(){
         System.out.println("Signing up...");
     }
 
-    @Test
+    @Test (priority = 2)
     public void LogIn(){
         System.out.println("Logging in...");
     }
 
-    @Test
+    @Test (priority = 3)
     public void AddToCart(){
         System.out.println("Adding item to cart...");
     }
 
-    @Test
+    @Test (priority = 4)
     public void LogOut(){
         System.out.println("Logging out...");
     }
